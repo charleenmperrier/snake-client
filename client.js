@@ -14,6 +14,23 @@ const connect = function() {
     console.log('Successfully connected to game server!');
     conn.write("Name: CP");
   });
+  // conn.on('connect',() => {
+    
+  //   setInterval(() => {
+  //     conn.write("Move: up");
+  //   },500);
+
+  //   setTimeout(() => {
+  //     conn.write("Move: left");
+  //   },1000);
+  //   setTimeout(() => {
+  //     conn.write("Move: left");
+  //   },2000);
+  //   setTimeout(() => {
+  //     conn.write("Move: right");
+  //   },3000);
+    
+  // });
   conn.on('data', (data) => {
     console.log('Snake says: ', data);
   });
