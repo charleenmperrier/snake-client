@@ -5,15 +5,25 @@ const handleUserInput = function (key){
   // console.log(key)
   if (key === '\u0003') {
     process.exit();
-  } else if (key === 'w') {
-    connection.write('Move: up')
-  } else if (key === 'a') {
-    connection.write('Move: left')
-  } else if (key === 's') {
-    connection.write('Move: down')
-  } else if (key === 'd') {
-    connection.write('Move: right')
   } 
+  if (key === 'w') {
+    connection.write('Move: up')
+  }
+  if (key === 'a') {
+    connection.write('Move: left')
+  }
+  if (key === 's') {
+    connection.write('Move: down')
+  }
+  if (key === 'd') {
+    connection.write('Move: right')
+  }
+  if (key === 'j') {
+    connection.write('Say: Wuz')
+  }
+  if (key === 'k') {
+    connection.write('Say: Up')
+  }
 };
 
  const setupInput = function(conn) {
